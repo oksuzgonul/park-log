@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="6dp">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="64dp">
+    <ImageView
+        android:id="@+id/tracking_status_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_parked"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="4dp"/>
+    <TextView
+        android:id="@+id/park_start_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Parked on May 12 2020, 19.32"
+        app:layout_constraintTop_toTopOf="@id/tracking_status_icon"
+        app:layout_constraintStart_toEndOf="@id/tracking_status_icon"
+        android:layout_marginStart="8dp"/>
+    <TextView
+        android:id="@+id/parking_name"
+        app:layout_constraintTop_toBottomOf="@id/park_start_time"
+        app:layout_constraintStart_toStartOf="@id/park_start_time"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="0dp"
+        tools:text="San Mateo Garage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/status_edit_button"
+        android:text="@string/end_parking"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:textColor="?colorSecondaryVariant"
+        android:textSize="12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/park_start_time"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

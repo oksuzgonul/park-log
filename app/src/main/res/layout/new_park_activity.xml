@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/appbar_layout" />
+
+    <ScrollView
+        android:layout_marginTop="?actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:id="@+id/car_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                map:layout_constraintStart_toStartOf="parent"
+                map:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:apiKey="@string/google_maps_key"
+                map:layout_constraintTop_toBottomOf="@id/car_spinner" />
+
+            <Button
+                android:id="@+id/current_location_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/pick_parking"
+                map:layout_constraintEnd_toEndOf="@id/map"
+                map:layout_constraintTop_toBottomOf="@id/map" />
+
+            <EditText
+                android:id="@+id/address_location_text"
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/edit_text_shape"
+                android:textColor="@color/quantum_grey700"
+                map:layout_constraintEnd_toEndOf="@id/current_location_button"
+                map:layout_constraintStart_toStartOf="@id/map"
+                map:layout_constraintTop_toBottomOf="@id/current_location_button" />
+
+            <TextView
+                android:id="@+id/assist_address_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/parking_address"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/address_location_text"
+                app:layout_constraintTop_toBottomOf="@id/address_location_text" />
+
+            <EditText
+                android:id="@+id/floor_number"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/edit_text_shape"
+                android:textColor="@color/quantum_grey700"
+                app:layout_constraintTop_toBottomOf="@id/address_location_text" />
+
+            <TextView
+                android:id="@+id/assist_floor_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/floor_number"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/floor_number"
+                app:layout_constraintTop_toBottomOf="@id/floor_number" />
+
+            <EditText
+                android:id="@+id/lot_number"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/edit_text_shape"
+                android:textColor="@color/quantum_grey700"
+                app:layout_constraintTop_toBottomOf="@id/floor_number" />
+
+            <TextView
+                android:id="@+id/assist_lot_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/lot_number"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/lot_number"
+                app:layout_constraintTop_toBottomOf="@id/lot_number" />
+
+            <EditText
+                android:id="@+id/parking_valid_button"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/edit_text_shape"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:textColor="@color/quantum_grey700"
+                app:layout_constraintTop_toBottomOf="@id/lot_number" />
+
+            <TextView
+                android:id="@+id/assist_parking_valid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/parking_valid_until"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/parking_valid_button"
+                app:layout_constraintTop_toBottomOf="@id/parking_valid_button" />
+
+            <Button
+                android:id="@+id/take_pic_button"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginTop="48dp"
+                android:text="@string/take_a_picture"
+                app:layout_constraintTop_toBottomOf="@id/parking_valid_button"
+                map:layout_constraintEnd_toEndOf="parent"
+                map:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/picture_image"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:scaleType="centerInside"
+                android:visibility="gone"
+                map:layout_constraintEnd_toEndOf="parent"
+                map:layout_constraintStart_toStartOf="parent"
+                map:layout_constraintTop_toBottomOf="@id/take_pic_button" />
+
+            <Button
+                android:id="@+id/park_save_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/save_park"
+                android:textAllCaps="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/picture_image" />
+
+            <ImageView
+                android:id="@+id/enlarged_picture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:visibility="gone"
+                map:layout_constraintBottom_toBottomOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">ParkLog</string>
+    <string name="add_car">add a car</string>
+    <string name="content_desc_fab">Add a new parking tracker</string>
+    <string name="owned_by">Owned by</string>
+    <string name="parking_history">Parking History</string>
+    <string name="current_parking_place">Current Parking Place</string>
+    <string name="get_car_now">get car now</string>
+    <string name="details_title">details</string>
+    <string name="picture_title">picture</string>
+    <string name="car_make">Car Make</string>
+    <string name="license_plate">License Plate</string>
+    <string name="car_owner">Car Owner</string>
+    <string name="car_color">Car Color</string>
+    <string name="save_car">save car</string>
+    <string name="floor_number">Floor #</string>
+    <string name="lot_number">Lot #</string>
+    <string name="parking_valid_until">Parking Valid Until</string>
+    <string name="save_park">save</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="default_info_title">Sydney</string>
+    <string name="default_info_snippet">Address in Sydney</string>
+    <string name="pick_place">Pick Parking Space</string>
+    <string name="pick_parking">pick parking</string>
+    <string name="title_activity_maps_current_place">MapsActivityCurrentPlace</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="option_add_car">add car</string>
+    <string name="parking_address">Parking Address</string>
+    <string name="set_parking_time">set parking time</string>
+    <string name="take_a_picture">take a picture</string>
+    <string name="location_permission_toast">Location cannot be detected due to lack of user permission</string>
+    <string name="use_current_coordinates">Use Current Coordinates</string>
+    <string name="marker_title_no_place">Custom Location Pin</string>
+    <string name="marker_snippet_no_place">Data saved as coordinates.</string>
+    <string name="change_picture">change picture</string>
+    <string name="next_day_parking_warning">Parking will be valid until tomorrow: </string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="update_park_button_title">update</string>
+    <string name="update_car_button_title">update</string>
+    <string name="delete_warning_title">Warning</string>
+    <string name="delete_car_warning_message">Are you sure to delete this car and the park log associated to it? This action cannot be reverted.</string>
+    <string name="delete_park_warning_message">Are you sure to delete this park log? This action cannot be reverted.</string>
+    <string name="delete_warning_yes">Yes</string>
+    <string name="delete_warning_no">No</string>
+    <string name="no_cars_text">Please add a car to start logging park activity.</string>
+    <string name="currently_not_tracked">Currently Not Tracked</string>
+    <string name="currently_tracked">Currently Tracked</string>
+    <string name="belongs_to">Belongs to</string>
+    <string name="park_finished">finished</string>
+    <string name="parked_on_floor_text">Parked on floor</string>
+    <string name="parked_on_text">Parked on</string>
+    <string name="end_parking">end parking</string>
+    <string name="lot_number_text">Lot Number</string>
+    <string name="ticket_expires_on">Ticket Expires on</string>
+    <string name="CHANNEL_NAME_PARK_UPDATES">Park Updates</string>
+    <string name="CHANNEL_DESC_PARK_UPDATES">Notifications regarding the current parking events.</string>
+    <string name="notification_toast">You will receive a notification before this park validation expires</string>
+    <string name="notification_text">Parking validation is about to expire for</string>
+    <string name="notification_title">Your meter is running out!</string>
+    <string name="parking_valid_default_set">Parking is set to be valid for one hour by default.</string>
+    <string name="owner_not_specified">Owner not specified</string>
+    <string name="pick_location_warning_toast">Please pick a parking spot before saving.</string>
+    <string name="car_name_warning_toast">Please enter a name for this car before saving.</string>
+    <string name="add_widget">Add widget</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="widget_last_parked">Last Parked:</string>
+    <string name="no_cars_parked_yet">No cars parked yet.</string>
+</resources>
